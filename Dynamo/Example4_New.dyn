@@ -1,0 +1,214 @@
+{
+  "Uuid": "d049b941-ca90-437e-870e-4dc815a418ea",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Example4_New",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "8b60dfdd-99f3-431e-85b9-17588da0868a-0004936e"
+      ],
+      "Id": "ad5519b224c64ce7b6606f5bd7aab4e2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fa9703663a044bc6a07eef44707a5a53",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "Diameter",
+      "Id": "4d0f1e74dd224dc29a9fb09bf3cb7311",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a07a01c6be944ea287681acbedc3d3ed",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 1200.0,
+      "MinimumValue": 600.0,
+      "StepValue": 100.0,
+      "InputValue": 700.0,
+      "Id": "459f23e18bcf4274a66b0b91c022f310",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3b0cbe7582ee4196979f0782dba6519b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetParameterByName@string,var",
+      "Id": "d16756c8aea04630b8e38d0799dc1b19",
+      "Inputs": [
+        {
+          "Id": "fa6f3408455c42aca4b641c995df942d",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea21071a4da14da3a8bb50f956f489bd",
+          "Name": "parameterName",
+          "Description": "The name of the parameter to set.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1226c458080a4a0f9fb6224abe3331ae",
+          "Name": "value",
+          "Description": "The value.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "371e86e395b14247b9f577b5ffd7713e",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set one of the element's parameters.\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "fa9703663a044bc6a07eef44707a5a53",
+      "End": "fa6f3408455c42aca4b641c995df942d",
+      "Id": "43da12a6edb440119743aa1b591cda97"
+    },
+    {
+      "Start": "a07a01c6be944ea287681acbedc3d3ed",
+      "End": "ea21071a4da14da3a8bb50f956f489bd",
+      "Id": "5210b431190d4f83bacefbb1ca5f1373"
+    },
+    {
+      "Start": "3b0cbe7582ee4196979f0782dba6519b",
+      "End": "1226c458080a4a0f9fb6224abe3331ae",
+      "Id": "36a6597d7fdb4dbeadfc4d8c4d1a70dd"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "ad5519b224c64ce7b6606f5bd7aab4e2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 186.40000000000003,
+        "Y": 89.6
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "4d0f1e74dd224dc29a9fb09bf3cb7311",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 228.7999999999999,
+        "Y": 277.59999999999991
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "459f23e18bcf4274a66b0b91c022f310",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 172.7999999999999,
+        "Y": 419.20000000000005
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.SetParameterByName",
+        "Id": "d16756c8aea04630b8e38d0799dc1b19",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 586.4,
+        "Y": 166.39999999999995
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}
